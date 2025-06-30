@@ -4,7 +4,13 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+
+// ✅ Allow all origins and credentials (important for mobile browser compatibility)
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
+
 app.use(express.json());
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
@@ -34,6 +40,7 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("✅ Proxy server running on port 5000");
+const PORT = process.env.PORT || 5000; // ⬅️ Optional: allow Render to choose the port
+app.listen(PORT, () => {
+  console.log(`✅ Proxy server running on port ${PORT}`);
 });
