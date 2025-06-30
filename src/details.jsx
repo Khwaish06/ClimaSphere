@@ -8,6 +8,7 @@ import 'leaflet/dist/leaflet.css';
 import { useState } from "react";
 import axios from "axios";
 import AlertBanner from "./alerts.jsx";
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 export default function Details() {
   const location = useLocation();
@@ -64,22 +65,23 @@ export default function Details() {
   };
 
   const handleAskAI = async (e) => {
-    e.preventDefault();
-    if (!userPrompt.trim()) return;
-    setLoading(true);
-    setBotResponse("");
+  e.preventDefault();
+  if (!userPrompt.trim()) return;
+  setLoading(true);
+  setBotResponse("");
 
-    try {
-      const response = await axios.post("http://localhost:5000/api/chat", {
-        prompt: `${userPrompt}. Weather info: City=${info.city}, Temp=${info.temp}, Weather=${info.weather}`
-      });
-      setBotResponse(response.data.message);
-    } catch (err) {
-      console.error("OpenRouter Proxy API error:", err);
-      setBotResponse("⚠️ Sorry, something went wrong.");
-    }
-    setLoading(false);
-  };
+  try {
+    const response = await axios.post(`${baseURL}/api/chat`, {
+      prompt: `${userPrompt}. Weather info: City=${info.city}, Temp=${info.temp}, Weather=${info.weather}`
+    });
+    setBotResponse(response.data.message);
+  } catch (err) {
+    console.error("OpenRouter Proxy API error:", err);
+    setBotResponse("⚠️ Sorry, something went wrong.");
+  }
+
+  setLoading(false);
+};
 
   return (
     <div className="container-fluid px-4 details-layout">
