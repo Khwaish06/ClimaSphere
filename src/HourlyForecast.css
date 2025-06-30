@@ -1,0 +1,29 @@
+.forecast-container {
+  background: #e9f3ff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+.forecast-block {
+  min-width: 70px;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.time {
+  font-weight: 500;
+}
+
+.humidity {
+  font-size: 0.75rem;
+  color: #007BFF;
+}
+.heading{
+  color: blue;
+}

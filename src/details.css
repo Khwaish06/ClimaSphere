@@ -1,0 +1,145 @@
+/* Main Weather Info Boxes */
+.setBox {
+  background-color: rgba(25, 110, 230, 0.9);
+  color: #fff;
+  border-radius: 15px;
+  padding: 14px 20px;
+  margin: 10px auto;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  transition: transform 0.2s ease-in-out;
+
+  width: 90%;
+  max-width: 520px;
+}
+
+/* Hover effect for smooth interaction */
+.setBox:hover {
+  transform: scale(1.02);
+}
+
+/* Card container */
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+}
+
+/* Top weather image */
+.card-img-top {
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* City name/title */
+.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* AQI card body */
+.card-body {
+  background: #ffffffec;
+  border-radius: 15px;
+}
+
+/* AQI icon */
+.card-title img {
+  filter: drop-shadow(1px 1px 1px #aaa);
+}
+
+/* Clothing suggestion highlight */
+.card-body p:last-of-type {
+  margin-top: 10px;
+  font-style: italic;
+  background-color: #ffeaa7;
+  color: #2d3436;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* Back button */
+button.btn.btn-secondary {
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
+  margin: 0 auto 20px;
+}
+.details-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+
+.forecast-panel,
+.card-panel {
+  flex: 1;
+  padding: 10px;
+}
+
+.forecast-panel {
+  max-width: 50%;
+}
+
+.card-panel {
+  max-width: 50%;
+}
+.details-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.weather-card-section {
+  flex: 1;
+  min-width: 300px;
+  order: 1;
+}
+
+.left-panel {
+  flex: 1;
+  min-width: 300px;
+  order: 2;
+}
+
+/* Inside Left Panel */
+.hourly-section, .map-section, .song-section {
+  margin-bottom: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .details-layout {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .weather-card-section {
+    order: 1;
+  }
+
+  .hourly-section {
+    order: 2;
+  }
+
+  .map-section {
+    order: 3;
+  }
+
+  .song-section {
+    order: 4;
+  }
+}

@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.input-container form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pacifico-regular {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+  color:blue
+}
+
+.error-message {
+  color: red;
+  margin-top: 0.5rem;
+}
+.card-body{
+  color: #212529; 
+}
+/* App.css */
+
+/* Main content container */
+.main-content {
+  padding: 2rem 1rem;
+  min-height: 80vh;
+  background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+}
+
+/* Welcome section styling */
+.welcome-section h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.welcome-section p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.welcome-section img {
+  margin-top: 15px;
+  width: 130px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.welcome-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .welcome-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .welcome-section p {
+    font-size: 0.95rem;
+  }
+
+  .welcome-section img {
+    width: 100px;
+  }
+}
