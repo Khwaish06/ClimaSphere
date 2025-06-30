@@ -1,12 +1,38 @@
-# React + Vite
+# 🌤️ ClimaSphere
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ClimaSphere is a sleek, responsive weather web app built using **React** and **Vite**, designed to provide real-time weather updates, air quality info, and more — all in an engaging, modern UI.
 
-Currently, two official plugins are available:
+> Live Demo: [https://clima-sphere-livid.vercel.app](https://clima-sphere-livid.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔍 **Search City Weather** – Get real-time weather by entering any city name.
+- 🎙️ **Speech Recognition** – Use your voice to search for locations.
+- 🌡️ **Live Weather Data** – Temperature, humidity, wind, visibility, and pressure.
+- 🧭 **Air Quality Index (AQI)** – Real-time AQI display with health indicators.
+- 🗺️ **Interactive Map** – Shows weather overlays and your selected location.
+- 💬 **Chat Box UI** – Weather results presented in a chat-style format.
+- 🎵 **Weather Songs (Fun Add-on)** – Suggests weather-based songs for mood setting.
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- **Frontend**: React, Vite, JSX, CSS
+- **APIs Used**:
+  - OpenWeatherMap API
+  - AQICN API (Air Quality)
+  - Leaflet.js (for maps)
+  - Web Speech API (for voice input)
+- **Deployment**: Vercel
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Khwaish06/ClimaSphere.git
+cd ClimaSphere
